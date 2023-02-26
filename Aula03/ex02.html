@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Trabalhando com While</h1>
+    <hr>
+    <button onclick="exemplo01()">OK</button>
+    <p id="resultado01"></p>
+
+    <hr>
+    <h1>Desafio</h1>
+    <h3>criar um sistema que ao apertar o ok leia nomes até o usuário escrever sair.
+        Quando sair, imprimir todos os nomes no resultado02 e aparecer uma mensagem de quantos nomes foram digitados.
+    </h3>
+    <hr>
+    <button onclick="Desafio01()">OK - While</button>
+    <button onclick="Desafio02()">OK - Do</button>
+    <p id="resultado02"></p>
+
+    <script>
+
+        function exemplo01()
+        {
+            var n = 0
+            L = ""
+
+            while (n <= 10)
+            {
+                L = L + " - " + n 
+                document.getElementById("resultado01").innerHTML = L
+                n++
+            }
+        }
+
+        function Desafio01()
+        {
+            var cont = 0
+            var nome = ""
+            var L = ""
+            nome = prompt("Informe seu nome")
+
+            while (nome != "sair")
+            {
+                L = L + nome + "<br>"
+                cont ++  // cont = cont + 1
+                nome = prompt("Informe seu nome")
+            }
+
+            document.getElementById("resultado02").innerHTML = L
+            alert("Total de nomes informados " + cont)
+        }
+
+        function Desafio02()
+        {
+            var cont = 0
+            var nome = ""
+            var L = ""
+            nome = prompt("Informe seu nome")
+
+            do
+            {
+                L = L + nome + "<br>"
+                cont ++  // cont = cont + 1
+                nome = prompt("Informe seu nome")
+            } while (nome != "sair")
+
+            document.getElementById("resultado02").innerHTML = L
+            alert("Total de nomes informados " + cont)
+        }
+
+
+
+    </script>
+
+</body>
+</html>

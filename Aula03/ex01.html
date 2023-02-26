@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de FOR</h1>
+    <button onclick="Contar()">OK</button>
+    <p id="resultado"></p>
+    
+    <hr>
+
+    <h1>Atividade 01</h1>
+    <h3>Criar um sistema que ao apertar um botão leia o valor final e imprima esse valor de 1 até o valor informado.</h3>
+    <button onclick="ContarAtividade01()">OK Atividade</button>
+    <p id="resultado02"></p>
+
+    <hr>
+
+    <h1>Atividade 02</h1>
+    <hr>
+    <h3>Criar um sistema que ao apertar um botão, leia o valor inicial e o valor final de uma contagem. 
+        Imprimir na tag P resultado03 a contagem apenas dos valores ímpares</h3>
+    <button onclick="ContarAtividade02()">OK Atividade</button>
+    <p id="resultado03"></p>
+    <script>
+
+        function Contar()
+        {
+            var L = ""
+            for (var i = 0; i <= 10; i++)
+            {
+                console.log(i)
+                L = L + i + "<br>"
+            }
+            document.getElementById("resultado").innerHTML = L
+        }
+
+        function ContarAtividade01()
+        {
+            var valorFinal = prompt("Informe o valor final da contagem")
+            var L = ""
+            
+            for(var i = 1; i <= valorFinal; i++)
+            {
+                if(i == valorFinal)
+                {
+                    L = L + i
+                }
+                else
+                {
+                    L = L + i + " - "
+                }                
+            }
+            document.getElementById("resultado02").innerHTML = L
+        }
+        
+        function ContarAtividade02()
+        {
+            var valorInical = prompt("Informe o valor inicial")
+            var valorFinal = prompt("Informe o valor final")
+            var L = ""
+            var primeiro = true
+
+            if(valorInical % 2 == 0)
+            {
+                valorInical = parseInt(valorInical) + 1 
+            }
+            else
+            {
+                valorInical = parseInt(valorInical) + 0 
+            }
+
+            for(var i = valorInical; i <= valorFinal; i=i+2)
+            {
+                if (primeiro)
+                {
+                    L = L + i
+                    primeiro = false
+                }
+                else
+                {
+                    L = L + " - " + i
+                }
+                
+            }
+            document.getElementById("resultado03").innerHTML = L
+        }
+
+        
+    </script>
+
+</body>
+</html>

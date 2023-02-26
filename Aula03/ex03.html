@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Array - Vector / Matriz</h1>
+
+    <script>
+        // Forma 01
+        var pets = new Array('Lucky','Toto','Charlote','Nala')
+        console.log(pets)
+
+        // Forma 02
+        var nomes = ['Asdrubal', 'Benegundes', 'Matuzalem', 'Jeroslava', 'Judith']
+        console.log(nomes)
+
+        // array Vazio
+        var dados = []
+        console.log(dados)
+
+        // chamando um valor por índice
+        console.log(pets[1])
+
+        // mudando valor de um array
+        nomes[4] = 'Maria'
+        console.log(nomes)
+
+        // for(var i = 0; i <= 3; i++)
+        // {
+        //     alert(pets[i])
+        // }
+
+        // inserindo valores no fim do array - PUSH
+        nomes.push(123)
+        console.log(nomes)
+
+        // Retornar a qtde de um array
+        console.log(nomes.length)
+
+        // Ordenar um array de strings
+        nomes.sort()
+        console.log(nomes)
+
+        var idades = [10,50,35,28,15,33]
+        console.log(idades)
+
+        idades.sort(function(a,b){return a - b})
+        console.log(idades)
+
+        var valores = [10.5,50.35,50.37,50.33,20.10]
+        console.log(valores)
+        
+        valores.sort(function(a,b){return a - b})
+        console.log(valores)
+
+        delete idades[3]
+        console.log(idades)
+    </script>
+</body>
+</html>
