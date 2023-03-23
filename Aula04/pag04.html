@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .quadrado{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Trabalhando com jquery</h1>
+    <hr>
+    <input type="text" id="txtNome">
+    <button onclick="enviarJS()">OK JS</button>
+    <button onclick="enviarJQ()">OK JQuery</button>
+    <hr>
+
+    <h3 id="result"></h3>
+    
+    <hr>
+
+    <h1>Efeitos no JQuery</h1>
+    <hr>
+    <h2>Hide/Show/Toggle</h2>
+    <button onclick="Esconder()">Esconder</button>
+    <button onclick="Aparecer()">Aparecer</button>
+    <button onclick="TudoJunto()">Tudo junto misturado</button>
+    <hr>
+    <div class="quadrado"></div>
+    <hr>
+    <h2>FadeIn/FadeOut/FadeToggle</h2>
+    <button onclick="EsconderFade()">Esconder</button>
+    <button onclick="AparecerFade()">Aparecer</button>
+    <button onclick="TudoJuntoFade()">Tudo junto misturado</button>
+    <button onclick="Animacao()">Vamos animar</button>
+    <hr>
+    <div class="quadrado"></div>
+    <hr>
+    
+
+    <script src="js/jquery-3.6.3.js"></script>
+    <script>
+        function enviarJS()
+        {
+            document.getElementById("result").innerHTML = document.getElementById("txtNome").value
+        }
+
+        function enviarJQ()
+        {
+            //alert($("#txtNome").val())
+            $("#result").html($("#txtNome").val())
+        }
+
+        function Aparecer(){
+            $(".quadrado").show(1000)
+        }
+        function Esconder(){
+            //alert("teste")
+            $(".quadrado").hide(1000,function(){alert("Escondido")})
+        }
+        function TudoJunto(){
+            $(".quadrado").toggle(1000)
+        }
+
+        function EsconderFade()
+        {
+            $(".quadrado").fadeOut()
+        }
+        function AparecerFade()
+        {
+            $(".quadrado").fadeIn()
+        }
+        function TudoJuntoFade()
+        {
+            $(".quadrado").fadeToggle()
+        }
+        function Animacao()
+        {
+            $(".quadrado").animate({height:'300px', width: '300px', opacity: 0.5}, 3000)
+        }
+    </script>
+</body>
+</html>

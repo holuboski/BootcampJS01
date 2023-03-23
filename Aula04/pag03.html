@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Trabalhando com Objetos no JS.</h1>
+
+    <button onclick="Som(1)">Cachorro</button>
+    <button onclick="Som(2)">Pintinho</button>
+    <button onclick="Som(3)">Porco</button>
+    <button onclick="Som(4)">Gato</button>
+    <button onclick="Som(5)">Sapo</button>
+    <p id="result"></p>
+    
+    <script>
+        
+        //Criar uma classe
+        class Animal
+        {
+            //Cria um método construtor para definir os objetos
+            constructor(som, pernas)
+            {
+                //propriedades que serão passadas do construtor par o objeto
+                this.som = som
+                this.pernas = pernas
+            }
+
+            //Cria um método de retorno do tipo de som 
+            fazerSom()
+            {
+                return this.som
+            }
+        }
+
+        let cachorro = new Animal("au au", 4)
+        let pintinho = new Animal("piu piu", 2)
+        let porco = new Animal("oink oinh",4)
+        let gato = new Animal("miauu",4)
+        let sapo = new Animal("herb", 4)
+
+        function Som(x)
+        {
+            // if(x == 1)
+            // {
+            //     document.getElementById("result").innerHTML = cachorro.fazerSom()
+            // }
+            // else if(x == 2)
+            // {
+            //     document.getElementById("result").innerHTML = pintinho.fazerSom()
+            // }
+            // else if(x == 3)
+            // {
+            //     document.getElementById("result").innerHTML = porco.fazerSom()
+            // }
+            // else if(x == 4)
+            // {
+            //     document.getElementById("result").innerHTML = gato.fazerSom()
+            // }
+            // else{
+            //     document.getElementById("result").innerHTML = sapo.fazerSom()
+            // }
+            
+            switch (x) {
+                case 1:
+                    document.getElementById("result").innerHTML = cachorro.fazerSom()
+                    break
+                case 2:
+                    document.getElementById("result").innerHTML = pintinho.fazerSom()
+                    break
+                case 3:
+                    document.getElementById("result").innerHTML = porco.fazerSom()
+                    break
+                case 4:
+                    document.getElementById("result").innerHTML = gato.fazerSom()
+                    break
+                case 5:
+                    document.getElementById("result").innerHTML = sapo.fazerSom()
+                    break
+                default:
+                    document.getElementById("result").innerHTML = ""
+            }
+
+            try
+            {
+                sdfsdas
+            }
+            catch(e)
+            {
+                console.log(e.message)
+            }
+                
+        }
+        
+    </script>
+
+</body>
+</html>
